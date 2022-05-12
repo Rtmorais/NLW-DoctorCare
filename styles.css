@@ -1,8 +1,14 @@
-/* General */
+/*============================ General============================ */
 
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
 
 :root {
@@ -30,7 +36,11 @@ body {
   padding-inline: 2.4rem;
 }
 
-/* NAVBAR */
+ul {
+  list-style: none;
+}
+
+/*======================= NAVBAR================================ */
 
 nav {
   display: flex;
@@ -61,14 +71,80 @@ nav.scroll svg:nth-child(2) path {
   stroke: white;
 }
 
-/* HEADER */
+/*======================= MENU EXPANDED======================*/
+body.menu-expanded {
+  overflow: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+body.menu-expanded nav {
+  position: relative;
+}
+
+.menu ul:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  margin-top: 6rem;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .button {
+  color: var(--primary-color);
+  background: #ffffff;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  text-decoration: none;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  margin-top: 4.8rem;
+  margin-bottom: 8rem;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+/*===================== HEADER========================= */
 
 header::before {
   content: '';
   position: absolute;
   display: block;
   width: 100%;
-  height: 108rem;
+  height: calc(108rem + var(--nav-height));
   background-color: var(--primary-color-light);
   top: 0;
   left: 0;
