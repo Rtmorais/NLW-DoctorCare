@@ -1,7 +1,18 @@
 function onScroll() {
+  showNavOnScroll()
+  showBackToTopButton()
+}
+
+function showNavOnScroll() {
   if (scrollY > 0) {
     navigation.classList.add('scroll')
   } else navigation.classList.remove('scroll')
+}
+
+function showBackToTopButton() {
+  if (scrollY > 800) {
+    backToTopButton.classList.add('show')
+  } else backToTopButton.classList.remove('show')
 }
 
 function openMenu() {
@@ -26,5 +37,7 @@ ScrollReveal({
 #about,
 #about header,
 #about .content,
-#about .content img
+#about .content img,
+#contact,
+#contact img
 `)

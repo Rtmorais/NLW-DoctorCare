@@ -82,6 +82,28 @@ section .content p {
   line-height: 150%;
   color: var(--secondary-gray);
 }
+
+.button {
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1.6rem 3.2rem;
+  max-width: fit-content;
+  border-radius: 4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0 auto;
+  border: none;
+  transition: background 200ms;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+}
 /*======================= NAVBAR================================ */
 
 nav {
@@ -184,16 +206,13 @@ body.menu-expanded .menu {
 .menu .button {
   color: var(--primary-color);
   background: #ffffff;
-  border-radius: 4rem;
-  font-weight: 700;
+  max-width: fit-content;
   font-size: 1.8rem;
   line-height: 2.3rem;
-  text-decoration: none;
-  padding: 1.6rem 3.2rem;
-  display: inline-block;
-  margin-top: 4.8rem;
-  margin-bottom: 8rem;
+  font-weight: 700;
+  margin: 4.8rem auto 8rem auto;
 }
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -224,22 +243,6 @@ body.menu-expanded .menu {
   line-height: 150%;
   color: var(--secondary-gray);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  background-color: var(--primary-color);
-  color: var(--white);
-  height: 6.2rem;
-  width: 26.3rem;
-  border-radius: 4rem;
-  font-size: 1.4rem;
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-  margin: 0 auto;
-  border: none;
 }
 
 #imgGirl {
@@ -331,6 +334,78 @@ body.menu-expanded .menu {
   margin-bottom: 6rem;
 }
 
-#about .content img {
-  margin-bottom: 10rem;
+/*===================== CONTACT ========================= */
+
+#contact {
+  text-align: left;
+  display: flex;
+}
+#contact header h2 {
+  margin-bottom: 3.2rem;
+}
+
+#contact a {
+  margin-bottom: 6rem;
+  margin-left: 0;
+}
+
+#contact .content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact .content li {
+  color: var(--secondary-gray);
+  font-size: 1.6rem;
+  line-height: 150%;
+  display: flex;
+  gap: 0.8rem;
+}
+
+#contact img {
+  margin-bottom: 5rem;
+}
+
+/*===================== FOOTER ========================= */
+
+footer {
+  background: var(--primary-color);
+  text-align: left;
+  padding-block: 6rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  margin-top: 2.4rem;
+  line-height: 2;
+  color: var(--primary-beige);
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
+}
+
+/*===================== BACKTOTOP ========================= */
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
 }
