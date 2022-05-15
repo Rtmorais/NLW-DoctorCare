@@ -45,10 +45,43 @@ ul {
   list-style: none;
 }
 
-section {
-  padding-block: 10rem;
+img {
+  max-width: 100%;
 }
 
+section {
+  padding-block: 5rem;
+}
+
+section header h1 {
+  font-size: 3.4rem;
+  color: var(--secondary-color);
+  line-height: 130%;
+  margin-bottom: 2.4rem;
+}
+
+section header h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--secondary-color);
+}
+
+section header h4 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+  margin: 0;
+  margin-bottom: 1.6rem;
+}
+
+section .content p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: var(--secondary-gray);
+}
 /*======================= NAVBAR================================ */
 
 nav {
@@ -56,8 +89,7 @@ nav {
   height: var(--nav-height);
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   z-index: 100;
 }
 
@@ -69,11 +101,11 @@ nav .wrapper {
 
 nav.scroll {
   background: var(--primary-color);
-  width: 100%;
+
   transition: all 0.5s;
 }
 
-nav.scroll svg:nth-child(1) path {
+nav.scroll .logo path {
   fill: white;
 }
 
@@ -93,7 +125,7 @@ body.menu-expanded {
 }
 
 body.menu-expanded > :not(nav) {
-  display: none;
+  visibility: hidden;
 }
 
 body.menu-expanded .logo,
@@ -132,10 +164,6 @@ body.menu-expanded .menu {
   width: 100vw;
   height: 100vh;
   padding-top: var(--nav-height);
-}
-
-body.menu-expanded nav {
-  position: relative;
 }
 
 .menu ul:nth-child(1) {
@@ -189,19 +217,6 @@ body.menu-expanded nav {
 
 #home {
   padding-top: calc(4.1rem + var(--nav-height));
-}
-
-#home h4 {
-  font-size: 1.4rem;
-  color: var(--primary-color);
-  margin: 4.1rem 0 1.6rem 0;
-}
-
-#home h1 {
-  font-size: 3.4rem;
-  color: var(--secondary-color);
-  line-height: 130%;
-  margin-bottom: 2.4rem;
 }
 
 #home p {
@@ -272,21 +287,8 @@ body.menu-expanded nav {
 #services header {
   margin-top: 0;
 }
-#services header h4 {
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 150%;
-  letter-spacing: 0.08rem;
-  color: var(--primary-color);
-  margin: 0;
-  margin-bottom: 1.4rem;
-}
 
 #services header h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  line-height: 3.9rem;
-  color: var(--secondary-color);
   margin-bottom: 6rem;
 }
 
@@ -314,8 +316,21 @@ body.menu-expanded nav {
   margin-block: 1.6rem;
 }
 
-#services .cards p {
-  font-size: 1.6rem;
-  line-height: 150%;
-  color: var(--secondary-gray);
+/*===================== ABOUT ========================= */
+
+#about {
+  text-align: left;
+  background: var(--primary-beige);
+}
+
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-bottom: 6rem;
+}
+
+#about .content img {
+  margin-bottom: 10rem;
 }
