@@ -465,6 +465,29 @@ footer .social-links {
     overflow: auto;
   }
 
+  section {
+    padding-block: 10rem;
+  }
+
+  section header h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  section header h4 {
+    font-size: 1.4rem;
+    line-height: 150%;
+    letter-spacing: 0.8rem;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
   /*===================== NAVIGATION ========================= */
 
   nav#navigation .wrapper * {
@@ -582,7 +605,6 @@ footer .social-links {
   }
 
   #home .col-a {
-    grid-area: A;
     text-align: left;
     align-self: center;
   }
@@ -601,10 +623,6 @@ footer .social-links {
 
   #home .button {
     margin: 0;
-  }
-
-  #home .col-b {
-    grid-area: B;
   }
 
   #home img {
@@ -627,4 +645,69 @@ footer .social-links {
   }
 
   /*===================== SERVICES ========================= */
+  #services h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  /*===================== ABOUT ========================= */
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin: 0;
+  }
+
+  /*===================== CONTACT ========================= */
+  #contact .wrapper {
+    grid-template-columns: 1fr 57rem;
+    grid-template-areas: 'A B';
+    gap: 14.1rem;
+  }
+
+  #contact .col-a {
+    align-self: center;
+    text-align: left;
+  }
+
+  #contact a.button {
+    font-size: 1.4rem;
+  }
+
+  /*===================== FOOTER ========================= */
+
+  footer .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+
+  footer .col-a {
+    align-self: center;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+  footer .col-b {
+    align-self: center;
+    justify-self: end;
+  }
 }
